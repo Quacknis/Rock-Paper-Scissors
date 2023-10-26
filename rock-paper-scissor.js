@@ -3,52 +3,66 @@
     let computerWin = 0;
 
     function theKreyGame(){
-        let playerChoice = prompt("Pick Rock, Paper or Scissor.") + "".toLowerCase();
+        let playerChoice = prompt("Pick Rock, Paper or Scissor.");
+        if(playerChoice === null){
+            playerChoice ="null"
+        }else playerChoice = playerChoice.toLowerCase()
+
         let words = ["rock", "paper", "scissor"];
         let computerChoice =words[Math.floor(Math.random() * words.length)];
-        alert (`Krey has picked ${computerChoice}`);
-
+        
         if (playerChoice === "rock" && computerChoice === "scissor") {
-        alert("You won!");
-        playerWin++;
-        return;
+             alert (`Krey has picked ${computerChoice}`);
+             alert("You won!");
+             playerWin++;
+             return;
 
         } else if(playerChoice ==="paper" && computerChoice === "rock"){
-        alert("You won!");
-        playerWin++;
-        return;
+             alert (`Krey has picked ${computerChoice}`);
+             alert("You won!");
+             playerWin++;
+             return;
 
         } else if (playerChoice === "scissor" && computerChoice === "paper") {
-        alert("You won!");
-        playerWin++;
-        return;
+             alert (`Krey has picked ${computerChoice}`);
+             alert("You won!");
+             playerWin++;
+             return;
 
         } else if (playerChoice === "scissor" && computerChoice === "rock") {
-        alert("You lost!");
-        computerWin++;
-        return;
+             alert (`Krey has picked ${computerChoice}`);
+             alert("You lost!");
+             computerWin++;
+             return;
 
         } else if (playerChoice === "paper" && computerChoice === "scissor") {
-        alert("You lost!");
-        computerWin++;
-        return;
+             alert (`Krey has picked ${computerChoice}`);
+             alert("You lost!");
+             computerWin++;
+             return;
 
         } else if (playerChoice === "rock" && computerChoice === "paper") {
-        alert("You lost!");
-        computerWin++;
-        return;
+             alert (`Krey has picked ${computerChoice}`);
+             alert("You lost!");
+             computerWin++;
+             return;
 
         } else if (playerChoice === computerChoice ) {
-        alert("You tied!");
-        return;     
-    } else
-        alert("Incorrect, try again" );
-        theKreyGame();
+             alert (`Krey has picked ${computerChoice}`); 
+             alert("You tied!");
+             return;     
+    } else (playerChoice === "null")
+             alert("Incorrect, try again" );
+             theKreyGame();
 }
 
+alert("Game 1");
 theKreyGame();
+alert("Game 2");
 theKreyGame();
+alert("Game 3");
 theKreyGame();
+alert("Final Game");
 theKreyGame();
 
 if (playerWin > computerWin){
