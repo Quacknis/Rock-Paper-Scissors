@@ -3,7 +3,7 @@
     let computerWin = 0;
 
     function theKreyGame(){
-        let playerChoice = prompt("Pick Rock, Paper or Scissors.") + "".toLowerCase();
+        let playerChoice = prompt("Pick Rock, Paper or Scissor.") + "".toLowerCase();
         let words = ["rock", "paper", "scissor"];
         let computerChoice =words[Math.floor(Math.random() * words.length)];
         alert (`Krey has picked ${computerChoice}`);
